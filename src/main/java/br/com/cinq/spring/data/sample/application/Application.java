@@ -7,6 +7,7 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * Greeting Service.
@@ -16,6 +17,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan(basePackages = { "br.com.cinq.spring.data.sample.entity" })
 @EnableJpaRepositories("br.com.cinq.spring.data.sample.repository")
 @EnableAutoConfiguration
+@EnableTransactionManagement
 public class Application extends SpringBootServletInitializer {
 
     @Override

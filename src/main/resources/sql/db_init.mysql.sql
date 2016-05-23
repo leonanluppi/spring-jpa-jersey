@@ -14,12 +14,12 @@ INSERT INTO `Country` (id, name) VALUES(1,'Brazil');
 INSERT INTO `Country` (id, name) VALUES(2,'United States');
 INSERT INTO `Country` (id, name) VALUES(3,'France');
 
-
 CREATE TABLE IF NOT EXISTS `City` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(40),
     `country_id` INT,
-    PRIMARY KEY (`id`))
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`country_id`) references Country(id))
 ENGINE = InnoDB;
 
 TRUNCATE TABLE `City`;
